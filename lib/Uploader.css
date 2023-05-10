@@ -1,0 +1,26 @@
+.close-x {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px ;
+    background-color: rgba(0,0,0,0.4);
+    width: 30px;
+    height: 30px ;
+    border-radius: 50%;
+    transition: 0.5s;
+    color: white ;
+}
+.close-x:hover {
+    cursor: pointer;
+    color: red ;
+    
+}
+.conteneur {
+    position: relative;
+    width: 255px;
+    height: 255px;
+}

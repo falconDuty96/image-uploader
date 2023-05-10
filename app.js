@@ -1,6 +1,7 @@
 // Create a new instance of Uploader
 const myF = new Uploader();
 
+
 // Add queue to the list
 function adding(event) {
     myF.addData(event, "file[]");
@@ -14,5 +15,11 @@ $("#file").on("change",function () {
 
 // Transport the list to the input file
 $("#form").on("submit",function (e) {
+    e.preventDefault() ;
+
     myF.transfertImageToInput("file");
+}) ;
+
+$(document).on("click",".close-x",function() {
+    myF.deleteImage($(this))
 })
