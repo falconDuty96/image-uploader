@@ -4,6 +4,7 @@ const myF = new Uploader();
 
 // Add queue to the list
 function adding(event) {
+    // event.stopImmediatePropagation() ;
     myF.addData(event, "file[]");
 }
 
