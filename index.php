@@ -40,21 +40,20 @@
         $result = json_decode($images);
     }
 
-    // var_dump($result) ;
 
 
 
     ?>
     <div id="fileReader" style="display: flex;flex-direction: row;flex-wrap: wrap;">
-        <?php for($i = 0; $i < count($result); $i++) : ?>
+        <?php for ($i = 0; $i < count($result); $i++) : ?>
             <div class="conteneur">
-            <div class="close-x" data-idelement="<?php echo $i ;?>" data-idparent="1">x</div>
-            <img data-name="<?php echo $result[$i] ;?>" style='margin-right: 10px;width: 250px; height: 250px; object-fit: cover;' src="http://localhost/image-uploader/<?php echo $result[$i] ;?>">
-        </div>
-        <?php endfor ; ?>    
-    
+                <div data-datas="<?php echo $i; ?>" class="close-x" data-idelement="<?php echo $i; ?>" data-idparent="2">x</div>
+                <img style='margin-right: 10px;width: 250px; height: 250px; object-fit: cover;' src="http://localhost/image-uploader/<?php echo $result[$i]; ?>">
+            </div>
+        <?php endfor; ?>
+
     </div>
-    
+
 
 
     <script src="jquery.min.js"></script>

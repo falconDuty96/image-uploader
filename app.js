@@ -22,5 +22,21 @@ $("#form").on("submit",function (e) {
 }) ;
 
 $(document).on("click",".close-x",function() {
+    if($(this).data("idelement") !== "") {
+        console.log("ato oh")
+        var idElement = $(this).data("idelement") ;
+        var idParent = $(this).data("idparent") ;
+        $.ajax({
+            url: "http://localhost/image-uploader/suppression.php" ,
+            type: "post" ,
+            data: {
+                "idparent": idParent ,
+                "idelement": idElement ,
+            }
+        })
+        .done(function(data) {
+            console.log(data) ;
+        })
+    }
     myF.deleteImage($(this))
 })

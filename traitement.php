@@ -19,5 +19,7 @@
     }
 
     $conn->query("INSERT INTO images(images_content) VALUES('".json_encode($images)."')") ;
+
+    header("Location: index.php") ;
     
    
