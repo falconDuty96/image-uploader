@@ -16,7 +16,7 @@ $("#file").on("change",function () {
 
 // Transport the list to the input file
 $("#form").on("submit",function (e) {
-    e.preventDefault() ;
+    // e.preventDefault() ;
 
     myF.transfertImageToInput("file");
 }) ;
